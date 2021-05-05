@@ -1,8 +1,17 @@
 
 /* Text */
 html {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
+
+body {
+    overflow:hidden
+}
+
+div {
+    margin: 0 auto;
+}
+
 
 h1, h2, h3 , h4, h6 {
     font-family: 'Unica One', serif;
@@ -38,24 +47,56 @@ h5.card-title {
   animation: fadeIn 1s normal forwards;
 }
 
-
 .row {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: center;
+
+}
+.row.category {
     display: flex;
     flex-wrap: wrap;
     margin-right: 0px;
     margin-left: 0px;
     align-items:baseline !important;
+    
+
 }
+
 
 .row.impact {
     padding-top: 20px;
-    margin-right: 0px;
+    margin: 0 auto;
+}
+
+.row.events {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    padding-left: 0;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    height: auto;
+}
+
+.row.footer {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: auto;
 }
 
 .col {
     align-content: center;
-    float: right;
+    float: left;
     
+}
+
+.col-lg {
+    float: center;
+}
+
+.col-sm-4 {
+    align-items: center;
 }
   
 .container {
@@ -64,20 +105,20 @@ h5.card-title {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto; 
+
   }
 
 .container-footer {
     width: 100%;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+    
 }
 
 
 .container-fluid {
     background-color: white;
     padding-bottom: 30px;
+    margin: auto;
+    overflow:hidden
   }
 
 .container-fluid.content {
@@ -85,8 +126,10 @@ h5.card-title {
     width: 100%;
   }
 
-
-
+.card-title {
+    position: relative;
+    margin: 0 auto;
+}
 
   /* General */
   .customNav {
@@ -95,7 +138,7 @@ h5.card-title {
     background-color:#1C3D63 !important;
     background-size: cover;
     z-index: 10;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
   }
   .navbar-nav {
     margin-left: auto;
@@ -107,6 +150,12 @@ h5.card-title {
     height: 50px;
 
   }
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-family: "Roboto";
+    font-weight: lighter;
+
+  }
   .nav-item {
     margin: 0px 15px;
   }
@@ -114,13 +163,17 @@ h5.card-title {
   /* Navigation dropdown menu */
   .dropdown-menu {
     background: url("../images/transparency.png");
-    background-color: transparent !important;
+    background-color: #1C3D63 !important;
     background-size: cover;
   }
   .dropdown-item:focus, .dropdown-item:hover {
-      color: #16181b;
+      color: black;
       text-decoration: none;
-      background: black;
+      background:white;
+  }
+
+ .navbar-dropdown {
+      color:#1C3D63 !important ;
   }
   
   /* Navigation links */
@@ -172,6 +225,8 @@ h5.card-title {
     color: #ffffff;
 }
 
+
+
 .btn-secondary {
     background-color: white;
     border-style: solid;
@@ -216,7 +271,11 @@ h5.card-title {
   }  
 .cardContainer {
     text-align: center;
-    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: baseline;
+    float: left;
+    
 
   }  
 
@@ -235,13 +294,10 @@ h5.card-title {
   /* Content */
 
 
-.valueProp {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
 
 .img {
     align-items: center;
+    max-width: none;
     
   
 }
@@ -277,21 +333,40 @@ h5.card-title {
 }
 .imgstat {
       width: 100%;
-      align-content: center;
       float: right;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      vertical-align: center;
       
   }
 
 .imgtitle {
     width: 20px;
+    display: inline;
+    float: inline-start;
+  
+}
+@media only screen and (max-width: 629px)
+{
+  img.imgtitle {
+      float: none;
+    display:block;
+    transform: rotate(270deg);
+    image-orientation: 270deg;
+
+  }
 }
 
+
 .eventimg {
-    width: 600px;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 450px;
     float: left;
-    display: flex;
-    height: auto;
+    margin: 0 auto;
+    ;
 }
+
 
 .event {
     height: auto;
