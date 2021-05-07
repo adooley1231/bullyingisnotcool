@@ -73,6 +73,7 @@ h5.cardtitle {
 }
 
 
+
 .row.impact {
     padding-top: 20px;
     margin: 0 auto;
@@ -142,6 +143,10 @@ h5.cardtitle {
     background-color:#E7F0F5;
     width: 100%;
   }
+
+.container-fluid.testimonial {
+    background-color: #E7F0F5;
+}
 
 .cardtitle {
     position: relative;
