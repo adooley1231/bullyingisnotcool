@@ -87,13 +87,16 @@ h5.cardtitle {
     padding-left: 0;
     margin: 0 auto;
     width: 100%;
-    height: max-content;
+    height: min-content;
+    flex-direction: column;
+    position: relative;
 }
 
 .row.footer {
     padding-left: 60px;
     padding-right: 60px;
     margin: auto;
+    padding-bottom: 30px;
 }
 
 .col {
@@ -145,9 +148,10 @@ h5.cardtitle {
     margin: auto;
     overflow:hidden;
     vertical-align: middle;
-    height: auto;
+    min-height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    display:inline-flex;
 }
 .container-fluid.impact {
     background-color: white;
@@ -206,7 +210,7 @@ h5.cardtitle {
 
   }
   .nav-item:focus, .nav-item:hover {
-    text-transform: capitalize;
+    text-transform: none;
   }
 
 
@@ -224,11 +228,15 @@ h5.cardtitle {
     background-size: cover;
   }
   .dropdown-item:focus, .dropdown-item:hover {
-      color: black;
+      color: #1C3D63 !important;
       text-decoration: none;
       background:white;
   }
 
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+}
   .dropdown-menu.li.a:hover {
     color: #262626 !important;
     text-decoration: none;
