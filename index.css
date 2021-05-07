@@ -58,7 +58,7 @@ h5.cardtitle {
     display: flex;
     flex-wrap: wrap;
     vertical-align: middle !important;
-    padding-bottom: 20px;
+
 
 
 }
@@ -133,11 +133,29 @@ h5.cardtitle {
 
 .container-fluid {
     background-color: white;
-    padding-bottom: 30px;
     margin: auto;
     overflow:hidden;
     vertical-align: middle;
   }
+.container-fluid.event {
+    background-image: url(images/events.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: auto;
+    overflow:hidden;
+    vertical-align: middle;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container-fluid.impact {
+    background-color: white;
+    margin: auto;
+    overflow:hidden;
+    vertical-align: middle;
+    padding-bottom: 30px;
+}
 
 .container-fluid.content {
     background-color:#E7F0F5;
@@ -146,6 +164,7 @@ h5.cardtitle {
 
 .container-fluid.testimonial {
     background-color: #E7F0F5;
+    padding-bottom: 30px;
 }
 
 .cardtitle {
@@ -240,6 +259,7 @@ h5.cardtitle {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
   }
   
   /* Jumbotron copy */
