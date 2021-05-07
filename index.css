@@ -21,7 +21,13 @@ h1, h2, h3 , h4, h6 {
     font-weight: 100px;
     text-align: center;
   }
-  
+  h4 {
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      font-weight:lighter
+  }
+
+
   h2 {
       font: size 14px;
   }
@@ -51,7 +57,8 @@ h5.cardtitle {
 .row {
     display: flex;
     flex-wrap: wrap;
-    vertical-align: center;
+    vertical-align: middle !important;
+    padding-bottom: 20px;
 
 
 }
@@ -69,6 +76,7 @@ h5.cardtitle {
 .row.impact {
     padding-top: 20px;
     margin: 0 auto;
+    vertical-align: baseline;
 }
 
 .row.events {
@@ -76,9 +84,9 @@ h5.cardtitle {
     flex-wrap: wrap;
     align-items:center;
     padding-left: 0;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
     width: 100%;
-    height: auto;
+    height: max-content;
 }
 
 .row.footer {
@@ -101,6 +109,10 @@ h5.cardtitle {
 .col-sm-4 {
     align-items: center;
 }
+
+.col-xl-4.col-lg-4.col-md-4.col-sm-12 {
+    text-align: center;
+}
   
 .container {
     position: center;
@@ -113,6 +125,7 @@ h5.cardtitle {
 
 .container-footer {
     width: 100%;
+    text-align-last: center;
     
 }
 
@@ -121,7 +134,8 @@ h5.cardtitle {
     background-color: white;
     padding-bottom: 30px;
     margin: auto;
-    overflow:hidden
+    overflow:hidden;
+    vertical-align: middle;
   }
 
 .container-fluid.content {
@@ -144,6 +158,7 @@ h5.cardtitle {
     background-size: cover;
     z-index: 10;
     font-family: 'Roboto', sans-serif !important;
+    vertical-align: middle;
   }
   .navbar-nav {
     margin-left: auto;
@@ -152,6 +167,7 @@ h5.cardtitle {
   }
   .navbar-brand img {
     padding-right: 15px;
+    margin: auto;
     height: 50px;
 
   }
@@ -163,7 +179,19 @@ h5.cardtitle {
   }
   .nav-item {
     margin: 0px 15px;
+
   }
+  .nav-item:focus, .nav-item:hover {
+    text-transform: capitalize;
+  }
+
+
+/* change the background color */
+.navbar-custom {
+    background-color: #ffffff;
+}
+
+
   
   /* Navigation dropdown menu */
   .dropdown-menu {
@@ -177,10 +205,19 @@ h5.cardtitle {
       background:white;
   }
 
+  .dropdown-menu.li.a:hover {
+    color: #262626 !important;
+    text-decoration: none;
+    background-color: #f5f5f5;
+ } 
+
  .navbar-dropdown {
       color:#1C3D63 !important ;
   }
   
+.dropdown-toggle::after {
+    display:none;
+}
   /* Navigation links */
   .customNav a {
     color: white !important;
@@ -228,6 +265,7 @@ h5.cardtitle {
 .btn-primary {
     background: #C54C23;
     color: #ffffff;
+    text-align: center !important;
 }
 
 
@@ -240,10 +278,14 @@ h5.cardtitle {
     border-width: 3px;
 }
 
+.btn.btn-primary.btn-lg {
+    align-content: center;
+}
+
 
 .btn-group-lg>.btn, .btn-lg {
     font-size: 1rem;
-    float: center;
+    text-align: center;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: #E67A30;
@@ -265,12 +307,17 @@ h5.cardtitle {
     border-color: #1C3D63;
 }
 
+.contactus {
+    align-items: center;
+}
+
 /* Cards */
 .content {
     padding: 50px;
   }  
 .sectionHeading {
     text-align: center;
+    padding-bottom: 30px;
   }  
 .showsNear  {
     padding: 0px 30px 30px 30px;
@@ -281,6 +328,8 @@ h5.cardtitle {
     padding-bottom: 20px;
     align-items: baseline;
     float: left;
+    font-family: 'Unica One', serif;
+    columns: #1C3D63;
     
 
   }  
@@ -303,7 +352,6 @@ h5.cardtitle {
 
 .img {
     align-items: center;
-    max-width: none;
     
   
 }
@@ -340,35 +388,33 @@ h5.cardtitle {
 .imgstat {
       width: 100%;
       float: right;
-      padding-top: 20px;
+      padding-top: 70px;
       padding-bottom: 20px;
-      vertical-align: center;
       
   }
 
 .imgtitle {
-    width: 20px;
+    width: 30px;
     display: inline;
     float: inline-start;
     max-width: 100%;
     height: auto;
+    padding-top: 40px;
   
 }
 @media only screen and (max-width: 629px)
 {
   .imgtitle {
-      float: none;
-    display:block;
-    transform: rotate(270deg);
-    image-orientation: 270deg;
-
+    transform: rotate(90deg) !important;
   }
+
+
 }
 
 .calendar1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 60%;
     float: center;
 }
 .eventimg {
@@ -404,17 +450,29 @@ h5.cardtitle {
   
   /* Footer form */
 .form {
-    width: 500px;
-    margin: 35px auto;
+    width: 100%;
+    margin: 0px auto;
     padding: 45px;
     border: 1px solid #F2F2F2;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: white;
+    padding-left: 50px;
+    display:inherit;
   }
 
+.form-control {
+    border-radius: 60px;
+    width: 50%;
+    text-align: center;
+    display:initial;
+}
 
+.hr.solid {
+    border-top: 2px solid white;
+    width: 50%;
+  }
 
 
 .site-footer {
@@ -427,8 +485,8 @@ h5.cardtitle {
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
-  opacity:0.5
+  border-top-color:white;
+  width: 50%;
 }
 .site-footer hr.small
 {
@@ -454,15 +512,19 @@ h5.cardtitle {
 .footer-links
 {
   padding-left:0;
-  list-style:none
+  list-style:none;
+  text-align: inherit;
+  font-family: 'Roboto';
+
 }
 .footer-links li
 {
-  display:block
+  display:block;
+  padding-top: 10px;
 }
 .footer-links a
 {
-  color:#737373
+  color:white
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -470,11 +532,12 @@ h5.cardtitle {
 }
 .footer-links.inline li
 {
-  display:inline-block
+  display:inline-block;
 }
 .site-footer .social-icons
 {
-  text-align:right
+  text-align:right;
+  padding-top: 30px;
 }
 .site-footer .social-icons a
 {
@@ -558,15 +621,35 @@ h5.cardtitle {
 {
   background-color:#3b5998
 }
+
+.facebook {
+    background-image: url(images/facebook-f-logo-transparent-facebook-f-22\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+.twitter {
+    background-image: url(images/twitterlogo.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center;
+    background-size: 70%;
+}
+
+.instagram {
+    background-image: url(images/IGlogo.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center;
+    background-size: contain;
+    background-size: 65%;
+}
 .social-icons a.twitter:hover
 {
   background-color:#00aced
 }
-.social-icons a.linkedin:hover
-{
-  background-color:#007bb6
-}
-.social-icons a.dribbble:hover
+
+.social-icons a.instagram:hover
 {
   background-color:#ea4c89
 }
