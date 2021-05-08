@@ -439,6 +439,7 @@ h5.cardtitle {
 {
   .imgtitle {
     transform: rotate(90deg) !important;
+    transform-origin: bottom;
   }
 
 
