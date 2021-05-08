@@ -152,12 +152,12 @@ h5.cardtitle {
     padding-bottom: 30px;
     display:inline-flex;
 }
-.container-fluid.impact {
-    background-color: white;
-    margin: auto;
-    overflow:hidden;
-    vertical-align: middle;
-    padding-bottom: 30px;
+
+@media only screen and (max-width: 629px) {
+
+.container-fluid.event {
+    background-image: none;
+}
 }
 
 .container-fluid.content {
