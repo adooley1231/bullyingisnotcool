@@ -433,6 +433,7 @@ h5.cardtitle {
     max-width: 100%;
     height: auto;
     padding-top: 40px;
+    padding-bottom: 30px;
   
 }
 @media only screen and (max-width: 629px)
