@@ -257,6 +257,7 @@ h5.cardtitle {
     letter-spacing: 1px;
     text-transform: lowercase;
     border-radius: 25px;
+    letter-spacing: .25rem;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
